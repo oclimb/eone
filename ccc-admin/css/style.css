@@ -1,0 +1,29 @@
+/* =================================
+------------------------------------
+  WebUni - Education Template
+  Version: 1.0
+ ------------------------------------ 
+ ====================================*/
+
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+
+
+
+.sucees-msg {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.error-msg {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+small.help-block {
+    color: red;
+    font-weight: 600;
+}
