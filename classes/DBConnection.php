@@ -20,7 +20,7 @@ class dbcon {
 	}
     function dbcon_function() {
 
-        $this->con = mysqli_connect("localhost", "root", "", "ccc");
+        $this->con = mysqli_connect("localhost", "root", "", "eone");
         
 
         if (mysqli_connect_errno()) {
