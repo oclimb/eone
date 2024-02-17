@@ -3,10 +3,10 @@
 		<div class="container">
 			<div class="section-title mb-0 pb-2">
 				<h2>Discover a limitless world of learning</h2>
-				<p>Enhance the Knowledge, Enhance the Future</p>
+				<p>The options are endless with E-ONE LANKA Join today and browse our learning library.</p>
 			</div>
 			<div class="text-center pt-5">
-				<a href="register.php" class="site-btn">Register Now</a>
+				<a href="register.php" class="site-btn">Get started now</a>
 			</div>
 		</div>
 	</section>
