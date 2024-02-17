@@ -282,7 +282,7 @@ $(document).ready(function() {
 
     var selectedRef ='';
     if(selectedMethod == 'notref'){
-        selectedRef = 'CCC-353-3007';
+        selectedRef = 'EONE100A1000';
         $('#regDiv').css('display', 'none');
     }
     // if(selectedMethod == 'com'){

@@ -1936,7 +1936,7 @@ label.control-label {
 
 /*new css*/
 .course-item .course-thumb {
-    box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.445);
+    /* box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.445); */
     border-top-left-radius: 2.5rem;
     /* border-top-right-radius: 2.5rem; */
 }

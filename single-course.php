@@ -17,10 +17,10 @@ $course_function = new course_function();
 	<!-- Header section -->
 
 	<?php
-	$student_id ='';
+	$student_id = '';
 	$courseId = $_GET['cid'];
 	if (isset($_SESSION['LOGIN_USER_ID'], $_SESSION['LOGIN_USER'])) {
-	$student_id = $_SESSION['LOGIN_USER_ID'];
+		$student_id = $_SESSION['LOGIN_USER_ID'];
 	}
 
 
@@ -49,10 +49,23 @@ $course_function = new course_function();
 	<?php
 	require_once 'header.php'; ?>
 	<!-- Header section end -->
+	<?php
 
+
+
+	$cid = $_GET['cid'];
+	$querySearch = "SELECT * FROM `course` c , `content` t, `user_detail` d, `course_category` g WHERE c.`course_id` = t.`course_id` AND c.`user_id` = d.`user_id`
+			AND c.`category_id` = g.`category_id` AND c.`course_id` = '$cid'";
+	$resultVal = $db->select1DB($querySearch);
+
+	//$courseID = $resultVal['course_id'];
+	$queryStu = "SELECT * FROM `student_course` WHERE `course_id` ='$cid'";
+	$queryStuRes = $db->selectDB($queryStu);
+
+	?>
 
 	<!-- Page info -->
-	<div class="page-info-section set-bg" data-setbg="img/contact-us.jpg">
+	<div class="page-info-section set-bg" data-setbg="img/bg4.png?v=1">
 
 	</div>
 	<!-- Page info end -->
@@ -83,25 +96,12 @@ $course_function = new course_function();
 	-->
 	<!-- search section end -->
 
-	<?php
 
-
-
-	$cid = $_GET['cid'];
-	$querySearch = "SELECT * FROM `course` c , `content` t, `user_detail` d, `course_category` g WHERE c.`course_id` = t.`course_id` AND c.`user_id` = d.`user_id`
-				AND c.`category_id` = g.`category_id` AND c.`course_id` = '$cid'";
-	$resultVal = $db->select1DB($querySearch);
-
-	//$courseID = $resultVal['course_id'];
-	$queryStu = "SELECT * FROM `student_course` WHERE `course_id` ='$cid'";
-	$queryStuRes = $db->selectDB($queryStu);
-
-	?>
 
 	<!-- Page -->
 
 	<!-- single course section -->
-	<section class="single-course spad pb-0">
+	<section class="single-course spad pb-0" style="padding-top: 0;">
 		<div class="container">
 			<div class="course-meta-area">
 				<div class="row">
@@ -113,83 +113,82 @@ $course_function = new course_function();
 							unset($_SESSION['MSG']);
 						}
 						?>
-						<div class="course-note">Featured Course</div>
+						<!-- <div class="course-note">Featured Course</div> -->
 						<h3><?php echo $resultVal['course_name']; ?></h3>
 						<div class="course-metas">
-							<div class="course-meta">
-								<!--<div class="course-author">
-									<div class="ca-pic set-bg" data-setbg="img/authors/<//?php echo (strlen($resultVal['user_img']) > 0) ? $resultVal['user_img'] : "profile.jpeg"; ?>"></div>
-									<h6>Lecturer</h6>
-									<p><//?php echo $resultVal['name']; ?></p>
-								</div>-->
+							<!-- <div class="course-meta">
+								
 							</div>
 							<div class="course-meta">
 								<div class="cm-info">
 									<h6>Category</h6>
-									<p><?php echo $resultVal['category']; ?></p>
+									<p><?php //echo $resultVal['category']; 
+										?></p>
 								</div>
 							</div>
 							<div class="course-meta">
 								<div class="cm-info">
 									<h6>Students</h6>
-									<p><?php echo $queryStuRes['rowCount'] ?> Registered Student/s</p>
+									<p><?php //echo $queryStuRes['rowCount'] 
+										?> Registered Student/s</p>
 								</div>
 							</div>
 							<div class="course-meta">
 								<div class="cm-info">
 									<h6>Reviews</h6>
 									<?php
-									$queryRew = "SELECT CAST(SUM(`review`)/COUNT(`review`) AS INT) AS `re_percentage` , COUNT(`review`) AS `re_count` FROM `reviews` WHERE `course_id` ='$cid'";
-									$queryRewRes = $db->select1DB($queryRew);
+									// $queryRew = "SELECT CAST(SUM(`review`)/COUNT(`review`) AS INT) AS `re_percentage` , COUNT(`review`) AS `re_count` FROM `reviews` WHERE `course_id` ='$cid'";
+									// $queryRewRes = $db->select1DB($queryRew);
 
-									// $re_percentage = $queryRewRes['re_percentage'];
-									// $re_count = $queryRewRes['re_count'];
 
-									$re_percentage = 5;
-									$re_count = 5;
+									// $re_percentage = 5;
+									// $re_count = 5;
 
 
 									?>
-									<p><?php echo $re_count; ?> Reviews <span class="rating">
+									<p><?php //echo $re_count; 
+										?> Reviews <span class="rating">
 
 											<?php
-											for ($i = 0; $i < 5; $i++) {
-												if ($i < $re_percentage) {
-													echo '<i class="fa fa-star"></i>';
-												} else {
-													echo '<i class="fa fa-star is-fade"></i>';
-												}
-											}
+											// for ($i = 0; $i < 5; $i++) {
+											// 	if ($i < $re_percentage) {
+											// 		echo '<i class="fa fa-star"></i>';
+											// 	} else {
+											// 		echo '<i class="fa fa-star is-fade"></i>';
+											// 	}
+											// }
 											?>
 
 										</span></p>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<a href="#" class="site-btn price-btn">Price: <?php echo $resultVal['course_fee_display']; ?></a>
 						<a href="#" class="site-btn buy-btn" data-toggle="modal" data-target="#myPaymentModal">Buy This Course</a>
 					</div>
 				</div>
 			</div>
-			<img src="img/courses/<?php echo $resultVal['img']; ?> " alt="" class="course-preview">
+			<img src="img/courses/<?php echo $resultVal['img']; ?> " alt="" class="course-preview" style="width: 100%;">
 			<!--<div class="row">
 				<div class="col-lg-10 offset-lg-1 course-list">
 				<?php // echo $resultVal['course_des']; 
 				?>
 				</div>
 			</div>-->
-			<?php 
+			<?php
 
-              $queryCoursesVideo = "SELECT * FROM `content` WHERE `course_id` = '$cid' ORDER BY `order` ASC limit 1";
-              $execQueryCoursesVideo = $db->selectDB($queryCoursesVideo);
-                   
-              foreach ($execQueryCoursesVideo['data'] as $resultCoursesVideo) {
-              ?>
-                <br><br>
-                <h4 class="font-weight-bold"><?php echo $resultCoursesVideo['video_name']; ?></h4>
+			//   $queryCoursesVideo = "SELECT * FROM `content` WHERE `course_id` = '$cid' ORDER BY `order` ASC limit 1";
+			//   $execQueryCoursesVideo = $db->selectDB($queryCoursesVideo);
+
+			//   foreach ($execQueryCoursesVideo['data'] as $resultCoursesVideo) {
+			?>
+			<!-- <br><br>
+                <h4 class="font-weight-bold"><?php //echo $resultCoursesVideo['video_name']; 
+												?></h4>
                 <div class="card-people mt-auto">
                   <video width="100%" controls controlsList="nodownload">
-                    <source src="ccc-admin/videos/<?php echo $resultCoursesVideo['file_path']; ?>" type="video/mp4">
+                    <source src="ccc-admin/videos/<?php //echo $resultCoursesVideo['file_path']; 
+													?>" type="video/mp4">
 
                   </video>
                   <div class="weather-info">
@@ -197,8 +196,9 @@ $course_function = new course_function();
 
                     </div>
                   </div>
-                </div>
-          <?php } ?>
+                </div> -->
+			<?php //} 
+			?>
 		</div>
 	</section>
 	<!-- single course section end -->
@@ -232,11 +232,11 @@ $course_function = new course_function();
 				<div class="modal-body">SWIFT Code :BSAMLKLX</div>
 
 				<div class="modal-body">Note: Please send the confirmation (deposit slip or online payment confirmation) to the email info@3c.lk The course will be eligible to you within 24 hours of payment</div>
-                <?php
-					if (!isset($_SESSION['LOGIN_USER_ID'], $_SESSION['LOGIN_USER'])) {
-				echo '<div class="modal-body" style="color: red;">Only registered users can purchase courses</div>';
-			}
-			?>
+				<?php
+				if (!isset($_SESSION['LOGIN_USER_ID'], $_SESSION['LOGIN_USER'])) {
+					echo '<div class="modal-body" style="color: red;">Only registered users can purchase courses</div>';
+				}
+				?>
 				<!-- Modal footer -->
 				<div class="modal-footer">
 					<?php
