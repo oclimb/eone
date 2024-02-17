@@ -51,8 +51,8 @@ class user_function
 
 			//create referral code
 			$last_referral_id = $this->db->getValueAsf("SELECT `referral_code` AS f FROM `referral` ORDER BY `referral_id` DESC LIMIT 1");
-			$RefNo = explode("-", $last_referral_id)[2] + 1;
-			$referral_code = 'EONE-' . (strtoupper(substr(md5(time()), 0, 3))) . '-' . $RefNo;
+			$RefNo = explode("A", $last_referral_id)[2] + 1;
+			$referral_code = 'EONE' . (strtoupper(substr(md5(time()), 0, 3))) . 'A' . $RefNo;
 
 			//referal network and level
 			//$level_id = "";
