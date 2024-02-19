@@ -47,7 +47,6 @@
                               <th>Student Register</th>
                               <th>Email</th>
                               <th>Phone Number</th>
-                              <th>Total Earnings</th>
                               <th>Referral Code</th>
                               <th>Sponser</th>
                             </tr>
@@ -82,7 +81,6 @@
                                 <td><?php echo $resultStudents['reg_date'];  ?></td>
                                 <td><?php echo $resultStudents['email'];  ?></td>
                                 <td><?php echo $resultStudents['telephone_number'];  ?></td>
-                                <td></td>
                                 <td><?php echo $referral1;  ?></td>
                                 <td><?php echo $sponser;  ?></td>
                               </tr>

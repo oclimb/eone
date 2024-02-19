@@ -29,7 +29,7 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
                 <div class="card-people mt-auto">
-                  <img src="images/dashboard/main.svg" alt="people">
+                  <img src="../img/home-cover.png?v=1" alt="people">
                   <div class="weather-info">
                     <div class="d-flex">
                       

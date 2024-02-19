@@ -136,7 +136,7 @@ $userRefId = $referalCodeEx['referral_id'];
       </div>
     </div>
   </div> -->
-  <div id="right-sidebar" class="settings-panel">
+  <!-- <div id="right-sidebar" class="settings-panel">
     <i class="settings-close ti-close"></i>
     <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
       <li class="nav-item">
@@ -223,7 +223,7 @@ $userRefId = $referalCodeEx['referral_id'];
           <p class="text-gray mb-0 ">Call Sarah Graves</p>
         </div>
       </div>
-      <!-- To do section tab ends -->
+      
       <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
         <div class="d-flex align-items-center justify-content-between border-bottom">
           <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
@@ -283,9 +283,9 @@ $userRefId = $referalCodeEx['referral_id'];
           </li>
         </ul>
       </div>
-      <!-- chat tab ends -->
+      
     </div>
-  </div>
+  </div> -->
   <!-- partial -->
   <!-- partial:partials/_sidebar.html -->
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -302,12 +302,12 @@ $userRefId = $referalCodeEx['referral_id'];
             <span class="menu-title"><?php echo ($accountRole == 'Admin')? 'Students':'My Referrals' ; ?></span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="my_team.php">
             <i class="icon-head menu-icon"></i>
-            <span class="menu-title"><?php echo ($accountRole == 'Admin')? 'Team':'My Team' ; ?></span>
+            <span class="menu-title"><?php //echo ($accountRole == 'Admin')? 'Team':'My Team' ; ?></span>
           </a>
-        </li>
+        </li> -->
       <?php if ($accountRole == 'Admin') { ?>
         <li class="nav-item">
           <a class="nav-link" href="students_not.php">
@@ -377,6 +377,13 @@ $userRefId = $referalCodeEx['referral_id'];
           </a>
         </li>
 
+      <?php }else{ ?>
+        <li class="nav-item">
+          <a class="nav-link" href="my_courses.php">
+            <i class="icon-paper menu-icon"></i>
+            <span class="menu-title">My Courses</span>
+          </a>
+        </li>
       <?php } ?>
       <li class="nav-item">
           <a class="nav-link" href="../courses.php">
@@ -384,12 +391,7 @@ $userRefId = $referalCodeEx['referral_id'];
             <span class="menu-title">Courses</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="my_courses.php">
-            <i class="icon-paper menu-icon"></i>
-            <span class="menu-title">My Courses</span>
-          </a>
-        </li>
+        
         <?php if($isagreed == 1){ ?>
         <li class="nav-item">
           <a class="nav-link" href="referral_center.php">
@@ -401,7 +403,7 @@ $userRefId = $referalCodeEx['referral_id'];
 
       <li class="nav-item">
           <a class="nav-link" href="settings.php">
-            <i class="icon-paper menu-icon"></i>
+            <i class="icon-cog menu-icon"></i>
             <span class="menu-title">Settings</span>
           </a>
         </li>

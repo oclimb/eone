@@ -72,7 +72,7 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
           <div class="col-md-6 grid-margin stretch-card">
             <div class="card tale-bg">
               <div class="card-people mt-auto">
-                <img src="images/dashboard/main.svg" alt="people">
+                <img src="../img/home-cover.png?v=1" alt="people">
                 <div class="weather-info">
                   <div class="d-flex">
 
@@ -374,9 +374,9 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
               </fieldset>
             </form>
-            <?php if ($paymentMethodCount > 0 && $isagreed == 0) { ?>
+            <?php if ($isagreed == 0) { ?>
               <br>
-              <a href="?acept=done" class="btn btn-danger site-btn" data-toggle="modal" data-target="#agrementModal">Claim Your CCC startup Bonus and Activate Referal Center</a>
+              <a href="?acept=done" class="btn btn-danger site-btn" data-toggle="modal" data-target="#agrementModal">Activate Referal Center</a>
             <?php } ?>
           </div>
 
