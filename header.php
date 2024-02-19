@@ -22,14 +22,14 @@
 							<li class="login-menu">
 							<?php 
 							if (isset($_SESSION['LOGIN_USER_ID'],$_SESSION['LOGIN_USER'])) {
-								echo '<a href="ccc-admin" >Dashboard</a>';
+								echo '<a href="dashboard" >Dashboard</a>';
 								
 							  }else{
 								echo '<a href="login.php" >Login</a>';
 							  }
 							?>
 							</li>
-							<!-- <li><a href="ccc-admin">Home</a></li>			
+							<!-- <li><a href="dashboard">Home</a></li>			
 					        <a href="login.php" class="site-btn header-btn d-block">Login</a> -->
 						</ul>
 					</nav>

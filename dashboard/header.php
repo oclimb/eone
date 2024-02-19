@@ -15,8 +15,8 @@ $userRefId = $referalCodeEx['referral_id'];
 ?>
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="navbar-brand brand-logo mr-5" href="..\index.php"><img src="images/3C-ACADEMY-LOGO.webp" class="mr-2" alt="logo" /></a>
-    <a class="navbar-brand brand-logo-mini" href="..\index.php"><img src="images/3C-ACADEMY.png" alt="logo" /></a>
+    <a class="navbar-brand brand-logo mr-5" href="..\index.php"><img src="../img/main-logo.png?v=1" class="mr-2" alt="logo" /></a>
+    <a class="navbar-brand brand-logo-mini" href="..\index.php"><img src="../img/main-logo.png?v=1" alt="logo" /></a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
   <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -114,7 +114,7 @@ $userRefId = $referalCodeEx['referral_id'];
 <!-- partial -->
 <div class="container-fluid page-body-wrapper">
   <!-- partial:partials/_settings-panel.html -->
-  <div class="theme-setting-wrapper">
+  <!-- <div class="theme-setting-wrapper">
     <div id="settings-trigger"><i class="ti-settings"></i></div>
     <div id="theme-settings" class="settings-panel">
       <i class="settings-close ti-close"></i>
@@ -135,7 +135,7 @@ $userRefId = $referalCodeEx['referral_id'];
         <div class="tiles default"></div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div id="right-sidebar" class="settings-panel">
     <i class="settings-close ti-close"></i>
     <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">

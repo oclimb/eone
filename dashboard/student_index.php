@@ -199,7 +199,7 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
           </div>
         </div> -->
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
@@ -214,42 +214,40 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
                             <th>Course Category</th>
                             <th>Course Demo</th>
                             <th>Course Video</th>
-                            <th>Assignment</th>
                             <th>Payment</th>
 
 
                           </tr>
 
                           <?php
-                          $queryCourses = "SELECT * FROM `course` c, `course_category` a, `student_course` s WHERE c.`category_id` = a.`category_id` AND c.`course_id` = s.`course_id` AND s.`student_id`='$login_user_id'";
+                          // $queryCourses = "SELECT * FROM `course` c, `course_category` a, `student_course` s WHERE c.`category_id` = a.`category_id` AND c.`course_id` = s.`course_id` AND s.`student_id`='$login_user_id'";
 
 
-                          $execQueryCourses = $db->selectDB($queryCourses);
+                          // $execQueryCourses = $db->selectDB($queryCourses);
 
-                          foreach ($execQueryCourses['data'] as $resultCourses) {
-                            $courseStataus = $resultCourses['status'];
-                            $course_id = $resultCourses['course_id'];
-                            $paymentStatusQ = "SELECT `status` AS f FROM `payment` WHERE `course_id` ='$course_id' AND `student_id` ='$login_user_id' ";
-                            $paymentStatus = $db->getValueAsf($paymentStatusQ);
-                            $videoUrl = "";
-                            $payment = "Pending";
-                            if ($courseStataus == 1) {
-                              $videoUrl = '<a href="student_course_display.php?cid=' . $course_id . '" target="_blank">View</a>';
-                              $payment = "Done";
-                            }
+                          // foreach ($execQueryCourses['data'] as $resultCourses) {
+                          //   $courseStataus = $resultCourses['status'];
+                          //   $course_id = $resultCourses['course_id'];
+                          //   $paymentStatusQ = "SELECT `status` AS f FROM `payment` WHERE `course_id` ='$course_id' AND `student_id` ='$login_user_id' ";
+                          //   $paymentStatus = $db->getValueAsf($paymentStatusQ);
+                          //   $videoUrl = "";
+                          //   $payment = "Pending";
+                          //   if ($courseStataus == 1) {
+                          //     $videoUrl = '<a href="student_course_display.php?cid=' . $course_id . '" target="_blank">View</a>';
+                          //     $payment = "Done";
+                          //   }
 
                           ?>
                             <tr>
-                              <td><?php echo $resultCourses['course_name'];  ?></td>
-                              <td><?php echo $resultCourses['category'];  ?></td>
-                              <td><a href="../single-course.php?cid=<?php echo $course_id; ?>" target="_blank">View</a></td>
-                              <td><?php echo $videoUrl  ?></td>
-                              <td></td>
-                              <td><?php echo $payment  ?></td>
+                              <td><?php //echo $resultCourses['course_name'];  ?></td>
+                              <td><?php //echo $resultCourses['category'];  ?></td>
+                              <td><a href="../single-course.php?cid=<?php //echo $course_id; ?>" target="_blank">View</a></td>
+                              <td><?php //echo $videoUrl  ?></td>
+                              <td><?php //echo $payment  ?></td>
 
 
                             </tr>
-                          <?php } ?>
+                          <?php //} ?>
                         </thead>
                       </table>
                     </div>
@@ -260,7 +258,7 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
 
           </div>
-        </div>
+        </div> -->
 
 
         <!-- payment Method-->

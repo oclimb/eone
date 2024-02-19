@@ -187,7 +187,7 @@ $course_function = new course_function();
 												?></h4>
                 <div class="card-people mt-auto">
                   <video width="100%" controls controlsList="nodownload">
-                    <source src="ccc-admin/videos/<?php //echo $resultCoursesVideo['file_path']; 
+                    <source src="dashboard/videos/<?php //echo $resultCoursesVideo['file_path']; 
 													?>" type="video/mp4">
 
                   </video>

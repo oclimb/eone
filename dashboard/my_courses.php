@@ -26,8 +26,8 @@
                             <th>Course Name</th>
                             <th>Course Category</th>
                             <th>Course Demo</th>
-                            <th>Course Video</th>
-                            <th>Assignment</th>
+                            <th>Course View</th>
+                            <!-- <th>Assignment</th> -->
                             <th>Payment</th>
 
 
@@ -57,7 +57,7 @@
                               <td><?php echo $resultCourses['category'];  ?></td>
                               <td><a href="../single-course.php?cid=<?php echo $course_id; ?>" target="_blank">View</a></td>
                               <td><?php echo $videoUrl  ?></td>
-                              <td></td>
+                              <!-- <td></td> -->
                               <td><?php echo $payment  ?></td>
 
 
