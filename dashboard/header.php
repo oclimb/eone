@@ -394,9 +394,9 @@ $userRefId = $referalCodeEx['referral_id'];
         
         <?php if($isagreed == 1){ ?>
         <li class="nav-item">
-          <a class="nav-link" href="referral_center.php">
+          <a class="nav-link" href="withdrowal.php">
             <i class="icon-paper menu-icon"></i>
-            <span class="menu-title">Referral Center</span>
+            <span class="menu-title">Withdrowal</span>
           </a>
         </li>
         <?php } ?>

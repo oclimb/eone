@@ -6,7 +6,7 @@
 if (isset($_GET['acept_agree']) && $_GET['acept_agree'] == 'done') {
   $result = $user_function->aceptAgree($login_user_id);
   if($result){
-    header('Location: referral_center.php');
+    header('Location: withdrowal.php');
       exit();
   }
 }
