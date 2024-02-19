@@ -29,7 +29,7 @@ if (isset($_POST['login_user'])) {
 
     if ($result) {
 
-        header('Location: ccc-admin');
+        header('Location: dashboard');
         exit();
     } else {
         $_SESSION['MSG'] = "<div class='error-msg' >Incorrect User Name or Password </div>";

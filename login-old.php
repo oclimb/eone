@@ -28,7 +28,7 @@
     
     if($result){
 
-    header('Location: ccc-admin');
+    header('Location: dashboard');
       exit();
 
     }else{
