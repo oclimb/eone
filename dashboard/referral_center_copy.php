@@ -203,7 +203,7 @@
                 <div class="col-md-6 grid-margin transparent">
                 <p class="font-weight-500">My Referral Code - <?php echo $referalCode; ?> <button onclick="myFunction()">
                 Copy</button> </p>
-                <p class="font-weight-500" style=" display: inline-block;">My Referral Link - <span id="refLink"><?php echo "https://www.3c.lk/register.php?ref=" . $referalCode; ?></span></p> <button onclick="myFunction()">Copy</button>
+                <p class="font-weight-500" style=" display: inline-block;">My Referral Link - <span id="refLink"><?php echo "https://www.eonelk.lk/register.php?ref=" . $referalCode; ?></span></p> <button onclick="myFunction()">Copy</button>
                 
                   </div>
                   <div class="col-md-6 grid-margin transparent">

@@ -15,30 +15,30 @@
 	<?php
 	$msg = "";
 	if (isset($_POST['send'])) {
-		$to = "rathne1982@gmail.com";
+		// $to = "rathne1982@gmail.com";
 
 
-		$send_name = $_POST['send_name'];
-		$send_email = $_POST['send_email'];
-		$subject = $_POST['send_subject'];
-		$send_msg = $_POST['send_msg'];
+		// $send_name = $_POST['send_name'];
+		// $send_email = $_POST['send_email'];
+		// $subject = $_POST['send_subject'];
+		// $send_msg = $_POST['send_msg'];
 
-		$headers = "From: support@3c.lk\r\n";
+		// $headers = "From: info@eonelk.lk\r\n";
 
-		$headers .= "MIME-Version: 1.0\r\n";
-		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-		$message = 'Name-' . $send_name . '<br>' .
-			'E-mail-' . $send_email . '<br>' .
-			'Message-' . $send_msg . '<br>';
+		// $headers .= "MIME-Version: 1.0\r\n";
+		// $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+		// $message = 'Name-' . $send_name . '<br>' .
+		// 	'E-mail-' . $send_email . '<br>' .
+		// 	'Message-' . $send_msg . '<br>';
 
 
-		//echo $message;
-		$send = @mail($to, $subject, $message, $headers);
-		//@mail($to_ba, $subject, $message, $headers);
+		// //echo $message;
+		// $send = @mail($to, $subject, $message, $headers);
+		
 
-		if ($send) {
-			$msg = '<p style="colour=green;">Email send successful. Email: ' . $to . '</p>';
-		}
+		// if ($send) {
+		// 	$msg = '<p style="colour=green;">Email send successful. Email: ' . $to . '</p>';
+		// }
 	}
 
 	?>

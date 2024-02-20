@@ -232,7 +232,7 @@
                 <p><?php echo $referalCode; ?> <button onclick="myFunction()">
                 Copy Ref Code</button> </p>
                 <p class="text-primary fs-20 font-weight-500" style=" display: inline-block;">My Referral Link :</p>
-                <p> <span id="refLink"><?php echo "https://www.3c.lk/register.php?ref=" . $referalCode; ?></span>
+                <p> <span id="refLink"><?php echo "https://www.eonelk.lk/register.php?ref=" . $referalCode; ?></span>
                 </p> <button onclick="myFunction()">Copy Ref Link</button>
                 
                   </div>

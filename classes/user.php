@@ -236,10 +236,10 @@ class user_function
 		$responseUserDetails = $this->db->execDB($instQ);
 
 
-		$link = "https://www.3c.lk/reset_password.php?token=" . $token;
+		$link = "https://www.eonelk.lk/reset_password.php?token=" . $token;
 		if (strlen($queryEx['user_name']) > 0) {
 			$to = trim($userName);
-			$headers = "From: support@3c.lk\r\n";
+			$headers = "From: info@eonelk.lk\r\n";
 			$subject = 'Forgot Password';
 			$headers .= "MIME-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";

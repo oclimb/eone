@@ -217,11 +217,11 @@ $course_function = new course_function();
 				<!-- Modal body -->
 				<div class="modal-body">Please make to a fund transfer to the following account.</div>
 
-				<div class="modal-body"> (Use your contact number as the reference)</div>
+				<!-- <div class="modal-body"> (Use your contact number as the reference)</div>
 
 				<div class="modal-body">Bank Name : Sampath Bank PLC - Sri Lanka</div>
 
-				<div class="modal-body">Account Name :3C Academy</div>
+				<div class="modal-body">Account Name :</div>
 
 				<div class="modal-body">Account Number :0019 1001 9275</div>
 
@@ -231,7 +231,7 @@ $course_function = new course_function();
 
 				<div class="modal-body">SWIFT Code :BSAMLKLX</div>
 
-				<div class="modal-body">Note: Please send the confirmation (deposit slip or online payment confirmation) to the email info@3c.lk The course will be eligible to you within 24 hours of payment</div>
+				<div class="modal-body">Note: Please send the confirmation (deposit slip or online payment confirmation) to the email info@eonelk.lk The course will be eligible to you within 24 hours of payment</div> -->
 				<?php
 				if (!isset($_SESSION['LOGIN_USER_ID'], $_SESSION['LOGIN_USER'])) {
 					echo '<div class="modal-body" style="color: red;">Only registered users can purchase courses</div>';
