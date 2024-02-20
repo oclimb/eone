@@ -46,7 +46,7 @@
                               <th>Category</th>
                               <th>Published on</th>
                               <th>Course Demo</th>
-                              <th>Course Video</th>
+                              <th>Course View</th>
                               <th>Assignment</th>
                               
                               <?php
@@ -64,7 +64,7 @@
                                 <td><?php echo $resultCourses['category'];  ?></td>
                                 <td><?php echo $resultCourses['create_date'];  ?></td>
                                 <td><a href="../single-course.php?cid=<?php echo $resultCourses['course_id']; ?>" target="_blank">View</a></td>
-                                <td><a href="student_course_display.php?cid=<?php echo $resultCourses['course_id']; ?>" target="_blank">View</a></td>
+                                <td><a href="<?php echo $resultCourses['course_link']; ?>" target="_blank">View</a></td>
                                 <td></td>
                                 
                               </tr>

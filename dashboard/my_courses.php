@@ -42,12 +42,13 @@
                           foreach ($execQueryCourses['data'] as $resultCourses) {
                             $courseStataus= $resultCourses['status'];
                             $course_id = $resultCourses['course_id'];
+                            $course_link = $resultCourses['course_link'];
                             $paymentStatusQ = "SELECT `status` AS f FROM `payment` WHERE `course_id` ='$course_id' AND `student_id` ='$login_user_id' ";
                             $paymentStatus = $db->getValueAsf($paymentStatusQ);
                             $videoUrl = "";
                             $payment = "Pending";
                             if ($courseStataus == 1) {
-                              $videoUrl = '<a href="student_course_display.php?cid=' . $course_id . '" target="_blank">View</a>';
+                              $videoUrl = '<a href="' . $course_link . '" target="_blank">View</a>';
                               $payment = "Done";
                             }
 

@@ -317,7 +317,11 @@ class user_function
 		$courseAmmount = $data['courseAmmount'];
 		$referral_id = $data['referral_id'];
 		$course_id = $data['course_id'];
-		$bonusAmount = ($courseAmmount / 100) * 10;
+		//$bonusAmount = ($courseAmmount / 100) * 10;
+
+		$bonusAmountQ = "SELECT `direct_bonus` AS f FROM `course` WHERE `course_id` = '$course_id'";
+        $bonusAmount = $this->db->getValueAsf($bonusAmountQ);
+		
 
 		$sponserQ = "SELECT `user_id` AS f FROM `referral` WHERE `referral_id` = '$referral_id' ";
 		$referralUser = $this->db->getValueAsf($sponserQ);
@@ -353,8 +357,10 @@ class user_function
 			} else if ($i == 7) {
 				$precentage = 2;
 			}
+			$bonusAmountQ = "SELECT `referral_bonus` AS f FROM `course` WHERE `course_id` = '$course_id'";
+			$bonusAmount = $this->db->getValueAsf($bonusAmountQ);
 
-			$bonusAmount = ($courseAmmount / 100) * $precentage;
+			//$bonusAmount = ($courseAmmount / 100) * $precentage;
 			$sponserQ = "SELECT u.`network_referral_id`,u.`user_id` FROM `user_detail` u, `referral` r  WHERE u.`user_id`=r.`user_id` AND r.`referral_id` = '$network_referral_id' ";
 			$sponserEx = $this->db->select1DB($sponserQ);
 
