@@ -155,7 +155,7 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
               <div class="card-body">
                 <p class="card-title">My Group</p>
                 <p class="font-weight-500">My Referral Code - <?php //echo $referalCode; ?> <button onclick="myFunction()">Copy</button> </p>
-                <p class="font-weight-500" style=" display: inline-block;">My Referral Link - <span id="refLink"><//?php echo "https://www.3c.lk/register.php?ref=" . $referalCode; ?></span></p> <button onclick="myFunction()">Copy</button>
+                <p class="font-weight-500" style=" display: inline-block;">My Referral Link - <span id="refLink"><//?php echo "https://www.eonelk.lk/register.php?ref=" . $referalCode; ?></span></p> <button onclick="myFunction()">Copy</button>
                 <p class="font-weight-500">Sponser Name - <?php //echo $sponser; ?></p>
                 <div class="d-flex flex-wrap mb-5">
                   <div class="mr-5 mt-3">

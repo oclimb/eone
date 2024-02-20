@@ -385,12 +385,12 @@ $userRefId = $referalCodeEx['referral_id'];
           </a>
         </li>
       <?php } ?>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
           <a class="nav-link" href="../courses.php">
             <i class="icon-paper menu-icon"></i>
             <span class="menu-title">Courses</span>
           </a>
-        </li>
+        </li> -->
         
         <?php if($isagreed == 1){ ?>
         <li class="nav-item">

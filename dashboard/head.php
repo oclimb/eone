@@ -49,6 +49,7 @@ $accountRole = $resultAccounts['role_name'];
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>E-ONE LANKA - Dashboard</title>
+  <link href="../img/favicon.ico?v=1" rel="shortcut icon"/>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">

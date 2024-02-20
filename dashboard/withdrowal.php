@@ -259,6 +259,8 @@
                   <p><b>Startup Bonus - </b>Rs <?php echo $getRefCenter['team_bonus'];  ?></p>
 
                   <p><b>Team Bonus - </b>Rs <?php echo $getRefCenter['team_bonus'];  ?></p>
+                  
+                  <p style="color: red;" ><b>Missing Bonus - </b>Rs <?php echo $getRefCenter['team_bonus_missing'];  ?></p>
 
 
                 </div>

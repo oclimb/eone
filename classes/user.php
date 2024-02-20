@@ -765,6 +765,9 @@ class user_function
 		  $teamBonusQ = "SELECT SUM(`bonus_ammount`) AS f  FROM `student_bouns` WHERE `payment_status` = 1 AND  user_id='$userId'";
           $teamBonus = $this->db->getValueAsf($teamBonusQ);
 
+		  $teamBonusMissingQ = "SELECT SUM(`bonus_ammount`) AS f  FROM `student_bouns` WHERE `payment_status` = 0 AND  user_id='$userId'";
+          $teamBonusMissing = $this->db->getValueAsf($teamBonusMissingQ);
+
 
 		  $level345Q = "SELECT SUM(`bonus_ammount`) AS f  FROM `student_bouns` WHERE `payment_status` = 1 AND `level` IN (3,4,5) AND user_id='$userId'";
           $level345 = $this->db->getValueAsf($level345Q);
@@ -814,6 +817,7 @@ class user_function
 		  'available_balance'=>$availableBalance,
 		  'startaup_bonus'=>$startaupBonus,
 		  'team_bonus'=>$teamBonus,
+		  'team_bonus_missing'=>$teamBonusMissing,
 		  'level345'=>$level345,
 		  'level67'=>$level67,
 		  'level89'=>$level89,

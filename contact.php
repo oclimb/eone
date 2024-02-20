@@ -154,10 +154,12 @@
 							</div><!-- /.single-contact-info -->
 							<div class="single-contact-info">
 								<h4>Phone</h4>
+								<p>070 7 488 000</p>
 								<!-- <p>Local: 222 999 888 <br> Mobile: 000 0000 0000</p> -->
 							</div><!-- /.single-contact-info -->
 							<div class="single-contact-info">
 								<h4>Email</h4>
+								<p>info@eonelk.lk</p>
 								<!-- <p>needhelp@printify.com <br> inquiry@printify.com</p> -->
 							</div><!-- /.single-contact-info -->
 							<div class="single-contact-info">
