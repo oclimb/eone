@@ -71,9 +71,11 @@ if (isset($_GET['stid']) && $_SESSION['FORM_SECRET'] == $_GET['token'] ) {
                             <tr>
                               <th>Name</th>
                               <th>Email</th>
-                              <th>Binance ID</th>
-                              <th>Binance Email</th>
-                              <th>USDT(TRC20) Address</th>
+                              <th>Account Name</th>
+                              <th>Account Number</th>
+                              <th>Bank </th>
+                              <th>Branch </th>
+                              <th>Branch Code</th>
                               <th>Amount</th>
                               <th>Date</th>
                               <th>Approval </th>
@@ -90,9 +92,11 @@ if (isset($_GET['stid']) && $_SESSION['FORM_SECRET'] == $_GET['token'] ) {
                               <tr>
                                 <td><?php echo $resultPayment['name'];  ?></td>
                                 <td><?php echo $resultPayment['email'];  ?></td>
-                                <td><?php echo ucfirst($resultPayment['binance_id']);  ?></td>
-                                <td><?php echo $resultPayment['binance_email'];  ?></td>
-                                <td><?php echo $resultPayment['binance_address'];  ?></td>
+                                <td><?php echo ucfirst($resultPayment['name']);  ?></td>
+                                <td><?php echo $resultPayment['acc_no'];  ?></td>
+                                <td><?php echo $resultPayment['bank'];  ?></td>
+                                <td><?php echo $resultPayment['branch'];  ?></td>
+                                <td><?php echo $resultPayment['branch_code'];  ?></td>
                                 <td><?php echo $resultPayment['amount'];  ?></td>
                                 <td><?php echo $resultPayment['create_date'];  ?></td>
                                 <td><a href="?stid=<?php echo $resultPayment['Withdrawal_id'];  ?>&token=<?php echo $_SESSION['FORM_SECRET'];  ?>">Approval</a></td>

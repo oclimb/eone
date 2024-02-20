@@ -15,15 +15,19 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
 
 
-  $save_binance_id = $_POST['binance_id'];
-  $save_binance_email = $_POST['binance_email'];
-  $save_binance_address = $_POST['binance_address'];
+  $save_acc_no = $_POST['acc_no'];
+  $save_acc_name = $_POST['acc_name'];
+  $save_acc_bank = $_POST['acc_bank'];
+  $save_acc_branch = $_POST['acc_branch'];
+  $save_acc_branch_code = $_POST['acc_branch_code'];
 
 
   $reguest_array = array(
-    'binance_id' => $save_binance_id,
-    'binance_email' => $save_binance_email,
-    'binance_address' => $save_binance_address,
+    'acc_no' => $save_acc_no,
+    'acc_name' => $save_acc_name,
+    'acc_bank' => $save_acc_bank,
+    'acc_branch' => $save_acc_branch,
+    'acc_branch_code' => $save_acc_branch_code,
     'user_id' => $login_user_id
   );
 
@@ -264,9 +268,11 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
         <!-- payment Method-->
 
         <?php
-        $binance_id = "";
-        $binance_email = "";
-        $binance_address = "";
+        $acc_no = "";
+        $acc_name = "";
+        $acc_bank = "";
+        $acc_branch = "";
+        $acc_branch_code = "";
 
 
         $paymentMethodQ = "SELECT * FROM `payment_method` WHERE `user_id` = '$login_user_id' AND `status` = 1";
@@ -274,9 +280,11 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
         if ($paymentMethodCount > 0) {
           $paymentMethodEx = $db->select1DB($paymentMethodQ);
-          $binance_id = $paymentMethodEx['binance_id'];
-          $binance_email = $paymentMethodEx['binance_email'];
-          $binance_address = $paymentMethodEx['binance_address'];
+          $acc_no = $paymentMethodEx['acc_no'];
+          $acc_name = $paymentMethodEx['name'];
+          $acc_bank = $paymentMethodEx['bank'];
+          $acc_branch = $paymentMethodEx['branch'];
+          $acc_branch_code = $paymentMethodEx['branch_code'];
         }
         ?>
         <div class="row">
@@ -292,11 +300,11 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
 
                 <div class="control-group">
-                  <label class="control-label" for="binance_id">Binance ID</label>
+                  <label class="control-label" for="acc_no">Account Number</label>
 
                   <div class="controls form-group">
 
-                    <input class="span4 form-control" id="binance_id" name="binance_id" value="<?php echo $binance_id; ?>" type="text">
+                    <input class="span4 form-control" id="acc_no" name="acc_no" value="<?php echo $acc_no; ?>" type="text">
 
 
                   </div>
@@ -305,11 +313,11 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
                 <!-- /control-group -->
 
                 <div class="control-group">
-                  <label class="control-label" for="binance_email">Binance Email</label>
+                  <label class="control-label" for="acc_name">Account Name</label>
 
                   <div class="controls form-group">
 
-                    <input class="span4 form-control" id="binance_email" name="binance_email" value="<?php echo $binance_email; ?>" type="text">
+                    <input class="span4 form-control" id="acc_name" name="acc_name" value="<?php echo $acc_name; ?>" type="text">
 
 
                   </div>
@@ -318,11 +326,38 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
                 <!-- /control-group -->
 
                 <div class="control-group">
-                  <label class="control-label" for="binance_address">USDT(TRC20) Address</label>
+                  <label class="control-label" for="acc_bank">Bank</label>
 
                   <div class="controls form-group">
 
-                    <input class="span4 form-control" id="binance_address" name="binance_address" value="<?php echo $binance_address; ?>" type="text">
+                    <input class="span4 form-control" id="acc_bank" name="acc_bank" value="<?php echo $acc_bank; ?>" type="text">
+
+
+                  </div>
+                  <!-- /controls -->
+                </div>
+                <!-- /control-group -->
+
+
+                <div class="control-group">
+                  <label class="control-label" for="acc_branch">Branch</label>
+
+                  <div class="controls form-group">
+
+                    <input class="span4 form-control" id="acc_branch" name="acc_branch" value="<?php echo $acc_branch; ?>" type="text">
+
+
+                  </div>
+                  <!-- /controls -->
+                </div>
+                <!-- /control-group -->
+
+                <div class="control-group">
+                  <label class="control-label" for="acc_branch_code">Branch Code</label>
+
+                  <div class="controls form-group">
+
+                    <input class="span4 form-control" id="acc_branch_code" name="acc_branch_code" value="<?php echo $acc_branch_code; ?>" type="text">
 
 
                   </div>
@@ -458,21 +493,35 @@ if (isset($_POST['save_payment']) && $_SESSION['FORM_SECRET'] == $_POST['API_sec
 
       fields: {
 
-        binance_id: {
+        acc_no: {
           validators: {
             notEmpty: {
               message: 'This is a required',
             }
           }
         },
-        binance_email: {
+        acc_name: {
           validators: {
             notEmpty: {
               message: 'This is a required',
             }
           }
         },
-        binance_address: {
+        acc_bank: {
+          validators: {
+            notEmpty: {
+              message: 'This is a required',
+            }
+          }
+        },
+        acc_branch: {
+          validators: {
+            notEmpty: {
+              message: 'This is a required',
+            }
+          }
+        },
+        acc_branch_code: {
           validators: {
             notEmpty: {
               message: 'This is a required',

@@ -175,15 +175,17 @@ class user_function
 		$response_validate = false;
 
 		$user_id = $data['user_id'];
-		$binance_id = $data['binance_id'];
-		$binance_email = $data['binance_email'];
-		$binance_address = $data['binance_address'];
+		$acc_no = $data['acc_no'];
+		$acc_name = $data['acc_name'];
+		$acc_bank = $data['acc_bank'];
+		$acc_branch = $data['acc_branch'];
+		$acc_branch_code = $data['acc_branch_code'];
 
 		$isfaildCourse = false;
 
 		// update course
-		$query = "REPLACE INTO `payment_method` (`user_id`, `binance_id`, `binance_email`, `binance_address`, `status`, `create_date`)
-		 VALUES ('$user_id', '$binance_id', '$binance_email', '$binance_address', 1, NOW())";
+		$query = "REPLACE INTO `payment_method` (`user_id`, `acc_no`, `name`, `bank`, `branch`,`branch_code`,`status`, `create_date`)
+		 VALUES ('$user_id', '$acc_no', '$acc_name', '$acc_bank', '$acc_branch', '$acc_branch_code', 1, NOW())";
 		$responseUser = $this->db->execDB("$query");
 
 		
