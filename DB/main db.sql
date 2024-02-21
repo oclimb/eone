@@ -14,7 +14,7 @@ MySQL - 10.4.27-MariaDB : Database - eone
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`eone` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
-USE `eone`;
+
 
 /*Table structure for table `authority` */
 
